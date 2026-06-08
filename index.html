@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Games Platform – USA's #1 Gaming Destination</title>
+  <meta name="description" content="Play the best USA gambling games online. Fish Table, Golden Dragon, Orion Stars, Juwa & more. Download apps & win big!"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎰</text></svg>"/>
+  <style>
+    /* ── NEW HOMEPAGE ANIMATIONS ── */
+    .hero { position: relative; overflow: hidden; }
+    
+    /* Glowing Background Pulse */
+    .hero-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60vw;
+      height: 60vw;
+      background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, rgba(255,34,68,0.05) 50%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse-glow-bg 8s infinite alternate;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes pulse-glow-bg {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+      100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    }
+
+    /* Floating Elements */
+    .floating-item {
+      position: absolute;
+      z-index: 2;
+      animation: float-3d 6s ease-in-out infinite;
+      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+      font-size: 3rem;
+    }
+    .f-1 { top: 20%; left: 10%; animation-delay: 0s; font-size: 4rem; }
+    .f-2 { top: 60%; right: 15%; animation-delay: -2s; font-size: 3.5rem; }
+    .f-3 { bottom: 20%; left: 20%; animation-delay: -4s; font-size: 5rem; opacity: 0.8; }
+    .f-4 { top: 30%; right: 25%; animation-delay: -1s; font-size: 2.5rem; }
+    
+    @keyframes float-3d {
+      0% { transform: translateY(0) rotate(0deg) scale(1); }
+      50% { transform: translateY(-20px) rotate(10deg) scale(1.1); }
+      100% { transform: translateY(0) rotate(0deg) scale(1); }
+    }
+
+    /* Typing Text Effect */
+    .typewriter-text {
+      overflow: hidden; 
+      border-right: .15em solid var(--gold); 
+      white-space: nowrap; 
+      margin: 0 auto; 
+      letter-spacing: .15em; 
+      animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--gold); }
+    }
+
+    /* Animated Border for Hero Banner */
+    .hero-badge-animated {
+      position: relative;
+      background: rgba(10, 10, 20, 0.8);
+      border: none;
+      z-index: 3;
+      overflow: hidden;
+    }
+    .hero-badge-animated::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: conic-gradient(transparent, var(--gold), transparent 30%);
+      animation: rotate-border 4s linear infinite;
+      z-index: -1;
+    }
+    .hero-badge-animated::after {
+      content: '';
+      position: absolute;
+      inset: 2px;
+      background: var(--bg);
+      border-radius: 50px;
+      z-index: -1;
+    }
+    @keyframes rotate-border {
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Reveal Animation for Elements */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: reveal-up-anim 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    
+    @keyframes reveal-up-anim {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Enhance card hover 3D effect */
+    .stat-box {
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+    }
+    .stat-box:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">🎰 Games Platform</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="referral.html">Share & Earn</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="games.html" class="nav-cta">Play Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏠 Home</a>
+  <a href="games.html">🎮 Games</a>
+  <a href="referral.html">🎁 Share & Earn</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="contact.html">📞 Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-particles" id="particles"></div>
+  
+  <!-- Floating 3D Elements -->
+  <div class="floating-item f-1">🎰</div>
+  <div class="floating-item f-2">🪙</div>
+  <div class="floating-item f-3">🃏</div>
+  <div class="floating-item f-4">🎲</div>
+
+  <!-- Roulette wheel SVG animation -->
+  <div class="roulette-anim">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="95" stroke="#FFD700" stroke-width="4" stroke-dasharray="8 4"/>
+      <circle cx="100" cy="100" r="75" stroke="#B8960C" stroke-width="2"/>
+      <circle cx="100" cy="100" r="55" stroke="#FFD700" stroke-width="3" stroke-dasharray="4 4"/>
+      <circle cx="100" cy="100" r="20" fill="#FFD700" opacity="0.3"/>
+      <circle cx="100" cy="100" r="10" fill="#FFD700"/>
+      <line x1="100" y1="5" x2="100" y2="195" stroke="#FFD700" stroke-width="1" opacity="0.4"/>
+      <line x1="5" y1="100" x2="195" y2="100" stroke="#FFD700" stroke-width="1" opacity="0.4"/>
+      <line x1="30" y1="30" x2="170" y2="170" stroke="#FFD700" stroke-width="1" opacity="0.3"/>
+      <line x1="170" y1="30" x2="30" y2="170" stroke="#FFD700" stroke-width="1" opacity="0.3"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge hero-badge-animated reveal-up">✨ USA'S PREMIER GAMING HUB</div>
+    <h1 class="reveal-up delay-1">Play. Win.<br/><span style="color:var(--gold);">Spin to Glory.</span></h1>
+    <p class="reveal-up delay-2">The ultimate destination for top USA gambling games. Fish Tables, Dragon Slots, Sweepstakes & more — all in one place!</p>
+    <div class="hero-btns reveal-up delay-3">
+      <a href="games.html" class="btn-primary">🎮 Explore All Games</a>
+      <a href="referral.html" class="btn-outline">🎁 Share & Earn Bonus</a>
+    </div>
+    
+    <div class="hero-stats reveal-up delay-3">
+      <div class="hero-stat">
+        <span class="num" data-target="22" data-suffix="">22</span>
+        <span class="lbl">Top Games</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num" data-target="50000" data-suffix="+">50,000+</span>
+        <span class="lbl">Active Players</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num" data-target="100" data-suffix="%">100%</span>
+        <span class="lbl">Safe & Secure</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num" data-target="24" data-suffix="/7">24/7</span>
+        <span class="lbl">Support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOT GAMES ── -->
+<section class="hot-section">
+  <div class="section-header fade-in" style="padding:0 5% 1.5rem">
+    <div class="section-badge" style="animation: pulse-glow 2s infinite;">🔥 Trending Now</div>
+    <h2 class="section-title">Hot Games</h2>
+  </div>
+  <div class="hot-scroll-container">
+    <div class="hot-strip" id="hotStrip"></div>
+  </div>
+</section>
+
+<!-- ── FEATURED GAMES ── -->
+<section style="background:var(--bg)">
+  <div class="section-header fade-in">
+    <div class="section-badge">🎮 Top Picks</div>
+    <h2 class="section-title">Featured Games</h2>
+    <p class="section-sub">Our handpicked selection of the best USA gambling games</p>
+  </div>
+  <div class="games-grid" id="featuredGrid"></div>
+  <div style="text-align:center;margin-top:4rem" class="fade-in">
+    <a href="games.html" class="btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem; box-shadow: 0 0 30px rgba(255,215,0,0.3);">View All 22 Games →</a>
+  </div>
+</section>
+
+<!-- ── WHY CHOOSE US ── -->
+<section style="background:var(--bg2)">
+  <div class="section-header fade-in">
+    <div class="section-badge">⭐ Why Us</div>
+    <h2 class="section-title">Why Choose Us?</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;max-width:1100px;margin:0 auto">
+    <div class="stat-box fade-in">
+      <span style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">🎯</span>
+      <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Top 22 Games</h3>
+      <p style="color:var(--text-dim);font-size:.9rem">Carefully curated USA's most popular gambling games all in one hub</p>
+    </div>
+    <div class="stat-box fade-in" style="transition-delay: 0.1s;">
+      <span style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">⚡</span>
+      <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Instant Play</h3>
+      <p style="color:var(--text-dim);font-size:.9rem">Click and play instantly — no waiting, no hassle, pure gaming action</p>
+    </div>
+    <div class="stat-box fade-in" style="transition-delay: 0.2s;">
+      <span style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">📱</span>
+      <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Mobile Apps</h3>
+      <p style="color:var(--text-dim);font-size:.9rem">Download official apps for every game and play anywhere, anytime</p>
+    </div>
+    <div class="stat-box fade-in" style="transition-delay: 0.3s;">
+      <span style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">🎁</span>
+      <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Earn Rewards</h3>
+      <p style="color:var(--text-dim);font-size:.9rem">Share our games with friends and earn exclusive bonuses to play</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<section style="background:linear-gradient(135deg,#1a0d00,#3d2000,#1a0d00);text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffd700\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  <div class="fade-in" style="position:relative;z-index:2;">
+    <div class="section-badge" style="animation: pulse-glow 2s infinite;">🎰 Limited Time</div>
+    <h2 class="section-title" style="color:var(--gold);font-size:3rem;text-shadow:0 0 20px rgba(255,215,0,0.5);">Share & Get Free Play Bonus!</h2>
+    <p style="color:var(--text-dim);margin-bottom:2rem;font-size:1.1rem;">Share our website with your friends and get exclusive bonuses and free plays instantly!</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="referral.html" class="btn-primary" style="box-shadow: 0 0 20px rgba(255,215,0,0.4);">🎁 Share & Earn Now</a>
+      <a href="games.html" class="btn-outline">🎮 View Games</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">🎰 Games Platform</a>
+      <p>USA's #1 destination for top gambling games. Play Fish Table, Golden Dragon, Orion Stars & more — all in one place!</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/gamesplatform" class="footer-social" target="_blank">📘</a>
+        <a href="https://wa.me/1234567890" class="footer-social" target="_blank">💬</a>
+        <a href="https://instagram.com/gamesplatform" class="footer-social" target="_blank">📷</a>
+        <a href="https://twitter.com/gamesplatform" class="footer-social" target="_blank">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">All Games</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Top Games</h4>
+      <ul>
+        <li><a href="games.html">Fish Table</a></li>
+        <li><a href="games.html">Golden Dragon</a></li>
+        <li><a href="games.html">Orion Stars</a></li>
+        <li><a href="games.html">Ultra Panda</a></li>
+        <li><a href="games.html">Juwa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="referral.html">Share & Earn</a></li>
+        <li><a href="contact.html">Support</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Games Platform. All rights reserved.</p>
+    <p class="disclaimer">⚠️ For entertainment purposes. Must be 18+ to play. Please game responsibly.</p>
+  </div>
+</footer>
+
+<script src="js/games.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

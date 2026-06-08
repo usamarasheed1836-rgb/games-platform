@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Share & Earn – Games Platform</title>
+  <meta name="description" content="Share Games Platform with friends and earn free play bonuses! Refer friends, share our Facebook pages, and claim exclusive rewards."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎰</text></svg>"/>
+  <style>
+    .confetti-wrap{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+    .confetti-piece{position:absolute;top:-20px;width:10px;height:10px;border-radius:50%;animation:fall linear infinite;}
+    @keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0;}}
+    .referral-page-hero{position:relative;overflow:hidden;}
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">🎰 Games Platform</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="referral.html" class="active">Share & Earn</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="games.html" class="nav-cta">Play Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏠 Home</a>
+  <a href="games.html">🎮 Games</a>
+  <a href="referral.html">🎁 Share & Earn</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="contact.html">📞 Contact</a>
+</div>
+
+<!-- CONFETTI -->
+<div class="confetti-wrap" id="confetti"></div>
+
+<!-- HERO -->
+<div class="referral-page-hero referral-hero" style="padding-top:120px">
+  <div class="hero-badge">🎁 FREE BONUS PROGRAM</div>
+  <h1>Share & Earn<br/>Free Play!</h1>
+  <p style="color:var(--text-dim);max-width:600px;margin:1rem auto 2.5rem;font-size:1.1rem;line-height:1.8">Share our website with your friends and family. The more you share — the more you earn! Contact us after sharing to claim your free play bonus.</p>
+  <div class="share-btns">
+    <a href="#" id="shareFB" target="_blank" class="share-btn share-fb">📘 Share on Facebook</a>
+    <a href="#" id="shareWA" target="_blank" class="share-btn share-wa">💬 Share on WhatsApp</a>
+    <a href="#" id="shareTW" target="_blank" class="share-btn share-tw">🐦 Share on Twitter</a>
+    <button id="copyLink" class="share-btn share-copy">🔗 Copy Link</button>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section style="background:var(--bg)">
+  <div class="section-header fade-in">
+    <div class="section-badge">📋 How It Works</div>
+    <h2 class="section-title">3 Easy Steps</h2>
+  </div>
+  <div class="referral-steps">
+    <div class="step-card fade-in">
+      <div class="step-num">1</div>
+      <h3>Share</h3>
+      <p>Share our website with your friends, family, or WhatsApp groups</p>
+    </div>
+    <div class="step-card fade-in">
+      <div class="step-num">2</div>
+      <h3>Contact Us</h3>
+      <p>After sharing, message us on Facebook or WhatsApp with a screenshot of your share</p>
+    </div>
+    <div class="step-card fade-in">
+      <div class="step-num">3</div>
+      <h3>Claim Bonus</h3>
+      <p>We'll verify your share and instantly credit your free play bonus — simple and fast!</p>
+    </div>
+  </div>
+</section>
+
+<!-- REWARDS -->
+<section style="background:var(--bg2)">
+  <div class="section-header fade-in">
+    <div class="section-badge">🏆 Rewards</div>
+    <h2 class="section-title">What You Can Earn</h2>
+  </div>
+  <div class="rewards-grid fade-in">
+    <div class="reward-card">
+      <span class="reward-icon">🎰</span>
+      <h4>Share Website</h4>
+      <p>Share our main website link and get free spins on your favorite game</p>
+    </div>
+
+    <div class="reward-card">
+      <span class="reward-icon">👥</span>
+      <h4>Invite Friends</h4>
+      <p>Bring a new active player and earn a premium referral reward</p>
+    </div>
+    <div class="reward-card">
+      <span class="reward-icon">🌟</span>
+      <h4>Top Sharer</h4>
+      <p>Most shares in a week wins a special grand bonus prize!</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CLAIM CTA -->
+<section style="background:linear-gradient(135deg,#1a0d00,#3d2000,#1a0d00);text-align:center">
+  <div class="fade-in">
+    <span style="font-size:3rem;display:block;margin-bottom:1rem">🎁</span>
+    <h2 class="section-title" style="color:var(--gold)">Ready to Claim Your Bonus?</h2>
+    <p style="color:var(--text-dim);max-width:500px;margin:0 auto 2rem;line-height:1.8">After sharing, contact us on Facebook or WhatsApp with proof of your share and we'll send your bonus right away!</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="https://www.facebook.com/gamesplatform" target="_blank" class="btn-primary">📘 Message on Facebook</a>
+      <a href="https://wa.me/1234567890" target="_blank" class="btn-outline">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">🎰 Games Platform</a>
+      <p>USA's #1 destination for top gambling games.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/gamesplatform" class="footer-social" target="_blank">📘</a>
+        <a href="https://wa.me/1234567890" class="footer-social" target="_blank">💬</a>
+        <a href="https://instagram.com/gamesplatform" class="footer-social" target="_blank">📷</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Top Games</h4><ul>
+      <li><a href="games.html">Fish Table</a></li>
+      <li><a href="games.html">Golden Dragon</a></li>
+      <li><a href="games.html">Orion Stars</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Community</h4><ul>
+      <li><a href="referral.html">Share & Earn</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Games Platform. All rights reserved.</p>
+    <p class="disclaimer">⚠️ Must be 18+ to play. Please game responsibly.</p>
+  </div>
+</footer>
+
+<script src="js/games.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Confetti animation
+  const confettiContainer = document.getElementById('confetti');
+  const colors = ['#FFD700','#FF2244','#00FF88','#1877f2','#fff','#FF6600'];
+  for (let i = 0; i < 40; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti-piece';
+    c.style.cssText = `
+      left:${Math.random()*100}%;
+      background:${colors[Math.floor(Math.random()*colors.length)]};
+      width:${Math.random()*8+5}px;
+      height:${Math.random()*8+5}px;
+      border-radius:${Math.random()>0.5?'50%':'2px'};
+      animation-duration:${Math.random()*5+4}s;
+      animation-delay:${Math.random()*3}s;
+      opacity:${Math.random()*0.6+0.2};
+    `;
+    confettiContainer.appendChild(c);
+  }
+</script>
+</body>
+</html>
