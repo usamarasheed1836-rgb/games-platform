@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Free Play – Games Platform</title>
+  <meta name="description" content="Spin the wheel to earn up to $7 Free Play! Read our blogs, explore the website, and contact us on Facebook to claim your bonus."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎰</text></svg>"/>
+  <style>
+    /* WHEEL SECTION STYLING */
+    .wheel-section {
+      padding: 4rem 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at center, var(--bg2) 0%, var(--bg) 100%);
+      min-height: 80vh;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Background light effects */
+    .wheel-bg-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255,215,0,0.08) 0%, rgba(255,34,68,0.02) 70%, transparent 100%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .wheel-instructions {
+      max-width: 700px;
+      margin-bottom: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .wheel-instructions h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px rgba(255,215,0,0.3);
+    }
+    .wheel-instructions p {
+      color: var(--text-dim);
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    /* PREMIUM WHEEL FRAME */
+    .wheel-outer-ring {
+      position: relative;
+      width: 410px;
+      height: 410px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #3a2b0c 0%, #1a1203 70%, #000000 100%);
+      border: 12px solid #FFD700;
+      box-shadow: 
+        0 15px 50px rgba(0,0,0,0.8),
+        0 0 30px rgba(255,215,0,0.4),
+        inset 0 0 20px rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    
+    /* Blinking Marquee Lights on the Golden Ring */
+    .light-bulb {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #fff;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%) origin;
+      transform-origin: 50% 193px; /* Radius minus half size */
+      z-index: 4;
+      box-shadow: 0 0 8px #fff;
+    }
+    
+    /* Alternating blink animations for retro casino look */
+    .light-bulb:nth-child(even) {
+      animation: blink-even 0.6s infinite alternate;
+    }
+    .light-bulb:nth-child(odd) {
+      animation: blink-odd 0.6s infinite alternate;
+    }
+    
+    @keyframes blink-even {
+      0% { background: #FFD700; box-shadow: 0 0 12px #FFD700, 0 0 20px #FFD700; }
+      100% { background: #333; box-shadow: none; }
+    }
+    @keyframes blink-odd {
+      0% { background: #333; box-shadow: none; }
+      100% { background: #FF3b30; box-shadow: 0 0 12px #FF3b30, 0 0 20px #FF3b30; }
+    }
+
+    /* Target Pointer (Golden Arrow) */
+    .wheel-pointer {
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 45px;
+      height: 45px;
+      z-index: 10;
+      filter: drop-shadow(0 5px 8px rgba(0,0,0,0.6));
+    }
+    .pointer-arrow {
+      width: 100%;
+      height: 100%;
+      fill: #FF2244;
+      stroke: #FFD700;
+      stroke-width: 3;
+    }
+
+    /* Wheel Container */
+    .wheel-container {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+      z-index: 3;
+    }
+    
+    /* Rotating Wheel Element */
+    .wheel {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: transform cubic-bezier(0.05, 0.8, 0.1, 1);
+      transform: rotate(0deg);
+    }
+    
+    /* 3D Spin Button */
+    .spin-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90px;
+      height: 90px;
+      background: radial-gradient(circle, #ffe875 0%, #d4af37 60%, #8a6d1c 100%);
+      border: 5px solid #fff;
+      border-radius: 50%;
+      z-index: 5;
+      cursor: pointer;
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: #000;
+      box-shadow: 
+        0 10px 25px rgba(0,0,0,0.6),
+        inset 0 4px 6px rgba(255,255,255,0.6),
+        inset 0 -4px 6px rgba(0,0,0,0.4);
+      transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+    }
+    .spin-btn:hover {
+      transform: translate(-50%, -50%) scale(1.08);
+      box-shadow: 
+        0 12px 30px rgba(255,215,0,0.6),
+        inset 0 4px 6px rgba(255,255,255,0.8);
+    }
+    .spin-btn:active {
+      transform: translate(-50%, -50%) scale(0.95);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    .spin-btn:disabled {
+      cursor: not-allowed;
+      filter: grayscale(0.8);
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.35s ease;
+    }
+    .modal-overlay.show {
+      display: flex;
+      animation: fadeIn 0.3s forwards;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    
+    .modal-content {
+      background: linear-gradient(135deg, var(--bg2) 0%, #151528 100%);
+      border: 2px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 3.5rem 2rem;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 
+        0 20px 50px rgba(0,0,0,0.8),
+        0 0 35px rgba(255,215,0,0.3);
+      transform: scale(0.7);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .modal-overlay.show .modal-content {
+      transform: scale(1);
+    }
+    .modal-content h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px rgba(255,215,0,0.5);
+    }
+    .modal-content p {
+      color: var(--text-dim);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2.2rem;
+    }
+    .modal-close {
+      background: transparent;
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      padding: 0.6rem 2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: 0.3s;
+    }
+    .modal-close:hover { 
+      border-color: var(--gold); 
+      color: var(--gold);
+    }
+    
+    /* Responsive adjustment */
+    @media (max-width: 480px) {
+      .wheel-outer-ring { width: 330px; height: 330px; border-width: 8px; }
+      .wheel-container { width: 290px; height: 290px; }
+      .light-bulb { transform-origin: 50% 153px; }
+      .wheel-instructions h2 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">🎰 Games Platform</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="freeplay.html" class="active">Free Play</a></li>
+    <li><a href="referral.html">Share & Earn</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="games.html" class="nav-cta">Play Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏠 Home</a>
+  <a href="games.html">🎮 Games</a>
+  <a href="freeplay.html">🎁 Free Play</a>
+  <a href="referral.html">🎁 Share & Earn</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="contact.html">📞 Contact</a>
+</div>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="index.html">Home</a> › Free Play</div>
+  <h1>🎡 Spin to Win</h1>
+  <p>Spin the wheel and claim your rewards today!</p>
+</div>
+
+<!-- SPIN WHEEL SECTION -->
+<section class="wheel-section">
+  <div class="wheel-bg-glow"></div>
+  
+  <div class="wheel-instructions fade-in">
+    <h2>Earn Up To $7 Free Play!</h2>
+    <p>Want free credits? Spin the wheel below, explore our website, read our blogs, and leave us your feedback on our Facebook page.</p>
+    <p>After you complete the steps, contact us on our Facebook page in English to claim your Free Play instantly!</p>
+  </div>
+
+  <!-- Outer Ring Frame -->
+  <div class="wheel-outer-ring fade-in" id="outerRing">
+    <!-- Pointer -->
+    <div class="wheel-pointer">
+      <svg class="pointer-arrow" viewBox="0 0 100 100">
+        <polygon points="50,15 20,85 50,70 80,85" />
+      </svg>
+    </div>
+
+    <!-- Bulbs generated dynamically in JavaScript -->
+    <div id="bulbsContainer"></div>
+
+    <!-- Spinning Container -->
+    <div class="wheel-container">
+      <svg class="wheel" id="wheel" viewBox="0 0 300 300">
+        <defs>
+          <linearGradient id="slice-grad-1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FF416C"/>
+            <stop offset="100%" stop-color="#FF4B2B"/>
+          </linearGradient>
+          <linearGradient id="slice-grad-2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#8A2387"/>
+            <stop offset="100%" stop-color="#E94057"/>
+          </linearGradient>
+          <linearGradient id="slice-grad-3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00F260"/>
+            <stop offset="100%" stop-color="#0575E6"/>
+          </linearGradient>
+          <linearGradient id="slice-grad-4" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#11998e"/>
+            <stop offset="100%" stop-color="#38ef7d"/>
+          </linearGradient>
+          <linearGradient id="slice-grad-5" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ff00cc"/>
+            <stop offset="100%" stop-color="#3333ff"/>
+          </linearGradient>
+          <linearGradient id="slice-gold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFE000"/>
+            <stop offset="100%" stop-color="#799F0C"/>
+          </linearGradient>
+        </defs>
+        
+        <!-- Slices: 6 slices = 60 degrees each. Arc calculations based on radius 140, center 150 -->
+        <g>
+          <!-- Slice 1: $1 (grad 1) -->
+          <path d="M 150 150 L 290 150 A 140 140 0 0 1 220 271.24 Z" fill="url(#slice-grad-1)" stroke="#070710" stroke-width="2"/>
+          <!-- Slice 2: $2 (grad 2) -->
+          <path d="M 150 150 L 220 271.24 A 140 140 0 0 1 80 271.24 Z" fill="url(#slice-grad-2)" stroke="#070710" stroke-width="2"/>
+          <!-- Slice 3: $3 (grad 3) -->
+          <path d="M 150 150 L 80 271.24 A 140 140 0 0 1 10 150 Z" fill="url(#slice-grad-3)" stroke="#070710" stroke-width="2"/>
+          <!-- Slice 4: ? Mystery (grad gold) -->
+          <path d="M 150 150 L 10 150 A 140 140 0 0 1 80 28.76 Z" fill="url(#slice-gold)" stroke="#070710" stroke-width="2"/>
+          <!-- Slice 5: $5 (grad 4) -->
+          <path d="M 150 150 L 80 28.76 A 140 140 0 0 1 220 28.76 Z" fill="url(#slice-grad-4)" stroke="#070710" stroke-width="2"/>
+          <!-- Slice 6: 0 (grad 5) -->
+          <path d="M 150 150 L 220 28.76 A 140 140 0 0 1 290 150 Z" fill="url(#slice-grad-5)" stroke="#070710" stroke-width="2"/>
+        </g>
+        
+        <!-- Text labels, positioned nicely inside the segments -->
+        <g fill="#ffffff" font-family="'Cinzel', serif" font-weight="900" text-anchor="middle">
+          <!-- Text rotation aligns with each segment's midpoint (30, 90, 150, 210, 270, 330 deg) -->
+          <text x="235" y="156" font-size="18" transform="rotate(30, 150, 150)">$1</text>
+          <text x="235" y="156" font-size="18" transform="rotate(90, 150, 150)">$2</text>
+          <text x="235" y="156" font-size="18" transform="rotate(150, 150, 150)">$3</text>
+          
+          <!-- ? slice has highlighted styling -->
+          <text x="235" y="160" font-size="28" fill="#ffffff" filter="drop-shadow(0 0 8px rgba(0,0,0,0.8))" transform="rotate(210, 150, 150)">?</text>
+          
+          <text x="235" y="156" font-size="18" transform="rotate(270, 150, 150)">$5</text>
+          <text x="235" y="156" font-size="18" transform="rotate(330, 150, 150)">0</text>
+        </g>
+      </svg>
+      <button class="spin-btn" id="spinBtn">SPIN</button>
+    </div>
+  </div>
+</section>
+
+<!-- WINNER MODAL -->
+<div class="modal-overlay" id="winnerModal">
+  <div class="modal-content">
+    <div style="font-size: 4.5rem; margin-bottom: 1rem; filter: drop-shadow(0 0 10px var(--gold));">🎁</div>
+    <h3>Mystery Bonus Won!</h3>
+    <p>Congratulations! You've landed on the Mystery Bonus.<br><br>To claim your free play up to $7, please explore our website, leave feedback on our Facebook page, and send us a message in English.</p>
+    <a href="https://www.facebook.com/gamesplatform" target="_blank" class="btn-primary" style="display:inline-flex; margin-bottom:1rem; box-shadow:0 0 15px rgba(255,215,0,0.3)">📘 Message on Facebook</a><br>
+    <button class="modal-close" onclick="document.getElementById('winnerModal').classList.remove('show')">Close</button>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">🎰 Games Platform</a>
+      <p>USA's #1 destination for top gambling games. Play Fish Table, Golden Dragon, Orion Stars & more — all in one place!</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/gamesplatform" class="footer-social" target="_blank">📘</a>
+        <a href="https://wa.me/1234567890" class="footer-social" target="_blank">💬</a>
+        <a href="https://instagram.com/gamesplatform" class="footer-social" target="_blank">📷</a>
+        <a href="https://twitter.com/gamesplatform" class="footer-social" target="_blank">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">All Games</a></li>
+        <li><a href="freeplay.html">Free Play</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Top Games</h4>
+      <ul>
+        <li><a href="games.html">Fish Table</a></li>
+        <li><a href="games.html">Golden Dragon</a></li>
+        <li><a href="games.html">Orion Stars</a></li>
+        <li><a href="games.html">Ultra Panda</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="referral.html">Share & Earn</a></li>
+        <li><a href="contact.html">Support</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Games Platform. All rights reserved.</p>
+    <p class="disclaimer">⚠️ For entertainment purposes. Must be 18+ to play. Please game responsibly.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Dynamic generation of Bulbs on the outer golden ring
+  const bulbsContainer = document.getElementById('bulbsContainer');
+  const totalBulbs = 24;
+  const isMobile = window.innerWidth <= 480;
+  const radius = isMobile ? 153 : 193; // Matches CSS transform-origins
+  
+  for (let i = 0; i < totalBulbs; i++) {
+    const bulb = document.createElement('div');
+    bulb.className = 'light-bulb';
+    const angle = (i * 360) / totalBulbs;
+    bulb.style.transform = `translateX(-50%) rotate(${angle}deg)`;
+    bulb.style.transformOrigin = `50% ${radius}px`;
+    bulbsContainer.appendChild(bulb);
+  }
+
+  // WHEEL SPINNING LOGIC (Rigged to '?')
+  const wheel = document.getElementById('wheel');
+  const spinBtn = document.getElementById('spinBtn');
+  const modal = document.getElementById('winnerModal');
+  
+  let currentRotation = 0;
+
+  spinBtn.addEventListener('click', () => {
+    spinBtn.disabled = true;
+    
+    // Random duration between 5 to 8 seconds
+    const duration = Math.random() * 3 + 5; 
+    
+    // Target slice is "?" which is Slice 4 (index 3).
+    // Midpoint of slice 4 is 210 degrees.
+    // SVG Top is 270 degrees.
+    // Rotation required to align midpoint to top: 270 - 210 = 60 degrees.
+    // Formula: (240 - targetSliceIndex * 60)
+    const targetDegree = 240 - (3 * 60); // 60 degrees
+    const extraSpins = Math.floor(Math.random() * 5) + 6; // 6 to 10 full spins
+    
+    const remainder = currentRotation % 360;
+    const offsetToZero = 360 - remainder; 
+    
+    const finalRotation = currentRotation + offsetToZero + (extraSpins * 360) + targetDegree;
+
+    wheel.style.transition = `transform ${duration}s cubic-bezier(0.05, 0.8, 0.1, 1)`;
+    wheel.style.transform = `rotate(${finalRotation}deg)`;
+    currentRotation = finalRotation;
+
+    // Show modal after spin finishes
+    setTimeout(() => {
+      modal.classList.add('show');
+      spinBtn.disabled = false;
+    }, duration * 1000 + 400);
+  });
+</script>
+</body>
+</html>
