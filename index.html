@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Games Platform – USA's #1 Gaming Destination</title>
-  <meta name="description" content="Play the best USA gambling games online. Fish Table, Golden Dragon, Orion Stars, Juwa & more. Download apps & win big!"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎰</text></svg>"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Games Platform – USA NO 1 Gaming Destination</title>
+  <meta name="description"
+    content="Play the best USA gambling games online. Fish Table, Golden Dragon, Orion Stars, Juwa & more. Download apps & win big!" />
+  <meta name="keywords"
+    content="USA gambling games, Fish Table online, Golden Dragon casino, Orion Stars slots, Juwa download, sweepstakes games, online casino USA, real money games" />
+  <meta name="author" content="Games Platform" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Games Platform – USA NO 1 Gaming Destination" />
+  <meta property="og:description"
+    content="Play the best USA gambling games online. Fish Table, Golden Dragon, Orion Stars, Juwa & more. Download apps & win big!" />
+  <meta property="og:image" content="https://gamesplat.com/images/hero_banner.png" />
+  <meta property="og:url" content="https://gamesplat.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎰</text></svg>" />
   <style>
     /* ── NEW HOMEPAGE ANIMATIONS ── */
-    .hero { position: relative; overflow: hidden; }
-    
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+
     /* Glowing Background Pulse */
     .hero-glow {
       position: absolute;
@@ -19,15 +36,23 @@
       transform: translate(-50%, -50%);
       width: 60vw;
       height: 60vw;
-      background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, rgba(255,34,68,0.05) 50%, transparent 70%);
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, rgba(255, 34, 68, 0.05) 50%, transparent 70%);
       border-radius: 50%;
       animation: pulse-glow-bg 8s infinite alternate;
       pointer-events: none;
       z-index: 1;
     }
+
     @keyframes pulse-glow-bg {
-      0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-      100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+      }
     }
 
     /* Floating Elements */
@@ -35,38 +60,85 @@
       position: absolute;
       z-index: 2;
       animation: float-3d 6s ease-in-out infinite;
-      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
       font-size: 3rem;
     }
-    .f-1 { top: 20%; left: 10%; animation-delay: 0s; font-size: 4rem; }
-    .f-2 { top: 60%; right: 15%; animation-delay: -2s; font-size: 3.5rem; }
-    .f-3 { bottom: 20%; left: 20%; animation-delay: -4s; font-size: 5rem; opacity: 0.8; }
-    .f-4 { top: 30%; right: 25%; animation-delay: -1s; font-size: 2.5rem; }
-    
+
+    .f-1 {
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+      font-size: 4rem;
+    }
+
+    .f-2 {
+      top: 60%;
+      right: 15%;
+      animation-delay: -2s;
+      font-size: 3.5rem;
+    }
+
+    .f-3 {
+      bottom: 20%;
+      left: 20%;
+      animation-delay: -4s;
+      font-size: 5rem;
+      opacity: 0.8;
+    }
+
+    .f-4 {
+      top: 30%;
+      right: 25%;
+      animation-delay: -1s;
+      font-size: 2.5rem;
+    }
+
     @keyframes float-3d {
-      0% { transform: translateY(0) rotate(0deg) scale(1); }
-      50% { transform: translateY(-20px) rotate(10deg) scale(1.1); }
-      100% { transform: translateY(0) rotate(0deg) scale(1); }
+      0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(10deg) scale(1.1);
+      }
+
+      100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+      }
     }
 
     /* Typing Text Effect */
     .typewriter-text {
-      overflow: hidden; 
-      border-right: .15em solid var(--gold); 
-      white-space: nowrap; 
-      margin: 0 auto; 
-      letter-spacing: .15em; 
-      animation: 
+      overflow: hidden;
+      border-right: .15em solid var(--gold);
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+      animation:
         typing 3.5s steps(40, end),
         blink-caret .75s step-end infinite;
     }
+
     @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
     }
+
     @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: var(--gold); }
+
+      from,
+      to {
+        border-color: transparent
+      }
+
+      50% {
+        border-color: var(--gold);
+      }
     }
 
     /* Animated Border for Hero Banner */
@@ -77,15 +149,19 @@
       z-index: 3;
       overflow: hidden;
     }
+
     .hero-badge-animated::before {
       content: '';
       position: absolute;
-      top: -50%; left: -50%;
-      width: 200%; height: 200%;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
       background: conic-gradient(transparent, var(--gold), transparent 30%);
       animation: rotate-border 4s linear infinite;
       z-index: -1;
     }
+
     .hero-badge-animated::after {
       content: '';
       position: absolute;
@@ -94,231 +170,801 @@
       border-radius: 50px;
       z-index: -1;
     }
+
     @keyframes rotate-border {
-      100% { transform: rotate(360deg); }
+      100% {
+        transform: rotate(360deg);
+      }
     }
-    
+
     /* Reveal Animation for Elements */
     .reveal-up {
       opacity: 0;
       transform: translateY(50px);
       animation: reveal-up-anim 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     }
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-    
-    @keyframes reveal-up-anim {
-      to { opacity: 1; transform: translateY(0); }
+
+    .delay-1 {
+      animation-delay: 0.2s;
     }
-    
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes reveal-up-anim {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     /* Enhance card hover 3D effect */
     .stat-box {
       transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
     }
+
     .stat-box:hover {
       transform: translateY(-15px) scale(1.05);
       box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
     }
   </style>
+
+  <!-- ── SPIN WHEEL STYLES (copied from freeplay) ── -->
+  <style>
+    .wheel-section {
+      padding: 4rem 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at center, var(--bg2) 0%, var(--bg) 100%);
+      min-height: 80vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wheel-bg-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, rgba(255, 34, 68, 0.02) 70%, transparent 100%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .wheel-instructions {
+      max-width: 700px;
+      margin-bottom: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .wheel-instructions h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .wheel-instructions p {
+      color: var(--text-dim);
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .wheel-outer-ring {
+      position: relative;
+      width: 410px;
+      height: 410px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #3a2b0c 0%, #1a1203 70%, #000000 100%);
+      border: 12px solid #FFD700;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .idx-light-bulb {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #fff;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      transform-origin: 50% 193px;
+      z-index: 4;
+      box-shadow: 0 0 8px #fff;
+    }
+
+    .idx-light-bulb:nth-child(even) {
+      animation: idx-blink-even 0.6s infinite alternate;
+    }
+
+    .idx-light-bulb:nth-child(odd) {
+      animation: idx-blink-odd 0.6s infinite alternate;
+    }
+
+    @keyframes idx-blink-even {
+      0% {
+        background: #FFD700;
+        box-shadow: 0 0 12px #FFD700, 0 0 20px #FFD700;
+      }
+
+      100% {
+        background: #333;
+        box-shadow: none;
+      }
+    }
+
+    @keyframes idx-blink-odd {
+      0% {
+        background: #333;
+        box-shadow: none;
+      }
+
+      100% {
+        background: #FF3b30;
+        box-shadow: 0 0 12px #FF3b30, 0 0 20px #FF3b30;
+      }
+    }
+
+    .wheel-pointer {
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 45px;
+      height: 45px;
+      z-index: 10;
+      filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.6));
+    }
+
+    .pointer-arrow {
+      width: 100%;
+      height: 100%;
+      fill: #FF2244;
+      stroke: #FFD700;
+      stroke-width: 3;
+    }
+
+    .wheel-container {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+      z-index: 3;
+    }
+
+    .wheel {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: transform cubic-bezier(0.05, 0.8, 0.1, 1);
+      transform: rotate(0deg);
+    }
+
+    .spin-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90px;
+      height: 90px;
+      background: radial-gradient(circle, #ffe875 0%, #d4af37 60%, #8a6d1c 100%);
+      border: 5px solid #fff;
+      border-radius: 50%;
+      z-index: 5;
+      cursor: pointer;
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: #000;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), inset 0 4px 6px rgba(255, 255, 255, 0.6), inset 0 -4px 6px rgba(0, 0, 0, 0.4);
+      transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    }
+
+    .spin-btn:hover {
+      transform: translate(-50%, -50%) scale(1.08);
+      box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6), inset 0 4px 6px rgba(255, 255, 255, 0.8);
+    }
+
+    .spin-btn:active {
+      transform: translate(-50%, -50%) scale(0.95);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .spin-btn:disabled {
+      cursor: not-allowed;
+      filter: grayscale(0.8);
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Modal */
+    .idx-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.35s ease;
+    }
+
+    .idx-modal-overlay.show {
+      display: flex;
+      animation: idx-fadeIn 0.3s forwards;
+    }
+
+    @keyframes idx-fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .idx-modal-content {
+      background: linear-gradient(135deg, var(--bg2) 0%, #151528 100%);
+      border: 2px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 3.5rem 2rem;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 215, 0, 0.3);
+      transform: scale(0.7);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .idx-modal-overlay.show .idx-modal-content {
+      transform: scale(1);
+    }
+
+    .idx-modal-content h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    .idx-modal-content p {
+      color: var(--text-dim);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2.2rem;
+    }
+
+    .idx-modal-close {
+      background: transparent;
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      padding: 0.6rem 2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: 0.3s;
+    }
+
+    .idx-modal-close:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    @media (max-width: 480px) {
+      .wheel-outer-ring {
+        width: 330px;
+        height: 330px;
+        border-width: 8px;
+      }
+
+      .wheel-container {
+        width: 290px;
+        height: 290px;
+      }
+
+      .idx-light-bulb {
+        transform-origin: 50% 153px;
+      }
+
+      .wheel-instructions h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* Wheel side layout */
+    .wheel-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .bonus-card {
+      flex: 0 0 220px;
+      background: rgba(255, 215, 0, 0.04);
+      border: 2px solid rgba(255, 215, 0, 0.35);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow:
+        0 0 25px rgba(255, 215, 0, 0.12),
+        inset 0 0 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bonus-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(transparent, rgba(255, 215, 0, 0.08), transparent 30%);
+      animation: rotate-border 6s linear infinite;
+      z-index: 0;
+    }
+
+    .bonus-card>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .bonus-card .bonus-icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 0.8rem;
+      filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
+    }
+
+    .bonus-card h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      line-height: 1.3;
+    }
+
+    .bonus-card .bonus-pct {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--gold);
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+
+    .bonus-card p {
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .wheel-stage {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .bonus-card {
+        flex: 0 0 auto;
+        width: 90%;
+        max-width: 340px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- ── NAVIGATION ── -->
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">🎰 Games Platform</a>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="games.html">Games</a></li>
-    <li><a href="referral.html">Share & Earn</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="games.html" class="nav-cta">Play Now</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">🏠 Home</a>
-  <a href="games.html">🎮 Games</a>
-  <a href="referral.html">🎁 Share & Earn</a>
-  <a href="about.html">ℹ️ About Us</a>
-  <a href="contact.html">📞 Contact</a>
-</div>
-
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-particles" id="particles"></div>
-  
-  <!-- Floating 3D Elements -->
-  <div class="floating-item f-1">🎰</div>
-  <div class="floating-item f-2">🪙</div>
-  <div class="floating-item f-3">🃏</div>
-  <div class="floating-item f-4">🎲</div>
-
-  <!-- Roulette wheel SVG animation -->
-  <div class="roulette-anim">
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="100" cy="100" r="95" stroke="#FFD700" stroke-width="4" stroke-dasharray="8 4"/>
-      <circle cx="100" cy="100" r="75" stroke="#B8960C" stroke-width="2"/>
-      <circle cx="100" cy="100" r="55" stroke="#FFD700" stroke-width="3" stroke-dasharray="4 4"/>
-      <circle cx="100" cy="100" r="20" fill="#FFD700" opacity="0.3"/>
-      <circle cx="100" cy="100" r="10" fill="#FFD700"/>
-      <line x1="100" y1="5" x2="100" y2="195" stroke="#FFD700" stroke-width="1" opacity="0.4"/>
-      <line x1="5" y1="100" x2="195" y2="100" stroke="#FFD700" stroke-width="1" opacity="0.4"/>
-      <line x1="30" y1="30" x2="170" y2="170" stroke="#FFD700" stroke-width="1" opacity="0.3"/>
-      <line x1="170" y1="30" x2="30" y2="170" stroke="#FFD700" stroke-width="1" opacity="0.3"/>
-    </svg>
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">🎰 Games Platform</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="freeplay.html"> Free Play</a></li>
+      <li><a href="referral.html">Share & Earn</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="games.html" class="nav-cta">Play Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="games.html">🎮 Games</a>
+    <a href="freeplay.html">🎡 Free Play</a>
+    <a href="referral.html">🎁 Share & Earn</a>
+    <a href="about.html">ℹ️ About Us</a>
+    <a href="contact.html">📞 Contact</a>
   </div>
 
-  <div class="hero-content">
-    <div class="hero-badge hero-badge-animated reveal-up">✨ USA'S PREMIER GAMING HUB</div>
-    <h1 class="reveal-up delay-1">Play. Win.<br/><span style="color:var(--gold);">Spin to Glory.</span></h1>
-    <p class="reveal-up delay-2">The ultimate destination for top USA gambling games. Fish Tables, Dragon Slots, Sweepstakes & more — all in one place!</p>
-    <div class="hero-btns reveal-up delay-3">
-      <a href="games.html" class="btn-primary">🎮 Explore All Games</a>
-      <a href="referral.html" class="btn-outline">🎁 Share & Earn Bonus</a>
+  <!-- ── SPIN WHEEL (first thing users see) ── -->
+  <section class="wheel-section" id="homeWheelSection">
+    <div class="wheel-bg-glow"></div>
+
+    <div class="wheel-instructions fade-in">
+      <h2>🎡 Spin & Win Up To $500 Free Play!</h2>
+      <p>Spin the wheel below, explore our website, read our blogs, and leave us your feedback on our Facebook page.</p>
     </div>
-    
-    <div class="hero-stats reveal-up delay-3">
-      <div class="hero-stat">
-        <span class="num" data-target="22" data-suffix="">22</span>
-        <span class="lbl">Top Games</span>
+
+    <!-- Wheel + Side Bonus Cards -->
+    <div class="wheel-stage">
+
+      <!-- LEFT: Referral Bonus -->
+      <div class="bonus-card fade-in">
+        <span class="bonus-icon">🎁</span>
+        <h2>Referral Bonus</h2>
+        <span class="bonus-pct">50%</span>
+        <p>Refer a friend and earn 50% bonus on their first deposit instantly!</p>
       </div>
-      <div class="hero-stat">
-        <span class="num" data-target="50000" data-suffix="+">50,000+</span>
-        <span class="lbl">Active Players</span>
+
+      <!-- CENTER: Outer Ring Frame -->
+      <div class="wheel-outer-ring fade-in" id="homeOuterRing">
+        <!-- Pointer -->
+        <div class="wheel-pointer">
+          <svg class="pointer-arrow" viewBox="0 0 100 100">
+            <polygon points="50,15 20,85 50,70 80,85" />
+          </svg>
+        </div>
+
+        <!-- Bulbs generated by JS -->
+        <div id="homeBulbsContainer"></div>
+
+        <!-- Spinning Container -->
+        <div class="wheel-container">
+          <svg class="wheel" id="homeWheel" viewBox="0 0 300 300">
+            <defs>
+              <linearGradient id="hsg1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FF416C" />
+                <stop offset="100%" stop-color="#FF4B2B" />
+              </linearGradient>
+              <linearGradient id="hsg2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7B2FBE" />
+                <stop offset="100%" stop-color="#E94057" />
+              </linearGradient>
+              <linearGradient id="hsg3" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#00C6FF" />
+                <stop offset="100%" stop-color="#0072FF" />
+              </linearGradient>
+              <linearGradient id="hsg4" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#11998e" />
+                <stop offset="100%" stop-color="#38ef7d" />
+              </linearGradient>
+              <linearGradient id="hsg5" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f7971e" />
+                <stop offset="100%" stop-color="#ffd200" />
+              </linearGradient>
+              <linearGradient id="hsg6" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#cc2b5e" />
+                <stop offset="100%" stop-color="#753a88" />
+              </linearGradient>
+              <linearGradient id="hsg-gold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFE000" />
+                <stop offset="100%" stop-color="#d4af37" />
+              </linearGradient>
+            </defs>
+            <g>
+              <path d="M 150 150 L 290 150 A 140 140 0 0 1 237.50 259.60 Z" fill="url(#hsg1)" stroke="#070710"
+                stroke-width="2" />
+              <path d="M 150 150 L 237.50 259.60 A 140 140 0 0 1 119.50 286.55 Z" fill="url(#hsg2)" stroke="#070710"
+                stroke-width="2" />
+              <path d="M 150 150 L 119.50 286.55 A 140 140 0 0 1 24.42 213.73 Z" fill="url(#hsg3)" stroke="#070710"
+                stroke-width="2" />
+              <path d="M 150 150 L 24.42 213.73 A 140 140 0 0 1 24.42 86.27 Z" fill="url(#hsg4)" stroke="#070710"
+                stroke-width="2" />
+              <path d="M 150 150 L 24.42 86.27 A 140 140 0 0 1 119.50 13.45 Z" fill="url(#hsg5)" stroke="#070710"
+                stroke-width="2" />
+              <path d="M 150 150 L 119.50 13.45 A 140 140 0 0 1 237.50 40.40 Z" fill="url(#hsg6)" stroke="#070710"
+                stroke-width="2" />
+              <path d="M 150 150 L 237.50 40.40 A 140 140 0 0 1 290 150 Z" fill="url(#hsg-gold)" stroke="#070710"
+                stroke-width="2" />
+            </g>
+            <g fill="#ffffff" font-family="'Cinzel', serif" font-weight="900" text-anchor="middle">
+              <text x="230" y="155" font-size="15" transform="rotate(25.71, 150, 150)">$2</text>
+              <text x="230" y="155" font-size="13" transform="rotate(77.14, 150, 150)">$50</text>
+              <text x="230" y="155" font-size="12" transform="rotate(128.57, 150, 150)">$150</text>
+              <text x="230" y="155" font-size="12" transform="rotate(180, 150, 150)">$250</text>
+              <text x="230" y="155" font-size="12" transform="rotate(231.43, 150, 150)">$350</text>
+              <text x="230" y="155" font-size="12" transform="rotate(282.86, 150, 150)">$500</text>
+              <text x="230" y="159" font-size="26" fill="#1a0a00" filter="drop-shadow(0 0 6px rgba(255,220,0,0.9))"
+                transform="rotate(334.29, 150, 150)">?</text>
+            </g>
+          </svg>
+          <button class="spin-btn" id="homeSpinBtn">SPIN</button>
+        </div>
       </div>
-      <div class="hero-stat">
-        <span class="num" data-target="100" data-suffix="%">100%</span>
-        <span class="lbl">Safe & Secure</span>
+
+      <!-- RIGHT: Sign Up Bonus -->
+      <div class="bonus-card fade-in">
+        <span class="bonus-icon">✨</span>
+        <h2>Sign Up Bonus</h2>
+        <span class="bonus-pct">100%</span>
+        <p>Get a 100% match bonus on your very first deposit with us!</p>
       </div>
-      <div class="hero-stat">
-        <span class="num" data-target="24" data-suffix="/7">24/7</span>
-        <span class="lbl">Support</span>
+
+    </div>
+  </section>
+
+  <!-- Winner Modal (Home) -->
+  <div class="idx-modal-overlay" id="homeWinnerModal">
+    <div class="idx-modal-content">
+      <div style="font-size:4.5rem;margin-bottom:1rem;filter:drop-shadow(0 0 10px var(--gold));">🎁</div>
+      <h3>Mystery Bonus Won!</h3>
+      <p>Congratulations! You've landed on the Mystery Bonus.<br><br>To claim your free play up to $500, please explore
+        our website, leave feedback on our Facebook page, and send us a message in English.</p>
+      <a href="https://www.facebook.com/profile.php?id=61577637233099" target="_blank" class="btn-primary"
+        style="display:inline-flex;margin-bottom:1rem;box-shadow:0 0 15px rgba(255,215,0,0.3)">📘 Message on
+        Facebook</a><br>
+      <button class="idx-modal-close"
+        onclick="document.getElementById('homeWinnerModal').classList.remove('show')">Close</button>
+    </div>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-particles" id="particles"></div>
+
+    <!-- Floating 3D Elements -->
+    <div class="floating-item f-1">🎰</div>
+    <div class="floating-item f-2">🪙</div>
+    <div class="floating-item f-3">🃏</div>
+    <div class="floating-item f-4">🎲</div>
+
+    <!-- Roulette wheel SVG animation -->
+    <div class="roulette-anim">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="95" stroke="#FFD700" stroke-width="4" stroke-dasharray="8 4" />
+        <circle cx="100" cy="100" r="75" stroke="#B8960C" stroke-width="2" />
+        <circle cx="100" cy="100" r="55" stroke="#FFD700" stroke-width="3" stroke-dasharray="4 4" />
+        <circle cx="100" cy="100" r="20" fill="#FFD700" opacity="0.3" />
+        <circle cx="100" cy="100" r="10" fill="#FFD700" />
+        <line x1="100" y1="5" x2="100" y2="195" stroke="#FFD700" stroke-width="1" opacity="0.4" />
+        <line x1="5" y1="100" x2="195" y2="100" stroke="#FFD700" stroke-width="1" opacity="0.4" />
+        <line x1="30" y1="30" x2="170" y2="170" stroke="#FFD700" stroke-width="1" opacity="0.3" />
+        <line x1="170" y1="30" x2="30" y2="170" stroke="#FFD700" stroke-width="1" opacity="0.3" />
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge hero-badge-animated reveal-up">✨ USA'S PREMIER GAMING HUB</div>
+      <h1 class="reveal-up delay-1">Play. Win.<br /><span style="color:var(--gold);">Spin to Glory.</span></h1>
+      <p class="reveal-up delay-2">The ultimate destination for top USA gambling games. Fish Tables, Dragon Slots,
+        Sweepstakes & more — all in one place!</p>
+      <div class="hero-btns reveal-up delay-3">
+        <a href="games.html" class="btn-primary">🎮 Explore All Games</a>
+        <a href="referral.html" class="btn-outline">🎁 Share & Earn Bonus</a>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ── HOT GAMES ── -->
-<section class="hot-section">
-  <div class="section-header fade-in" style="padding:0 5% 1.5rem">
-    <div class="section-badge" style="animation: pulse-glow 2s infinite;">🔥 Trending Now</div>
-    <h2 class="section-title">Hot Games</h2>
-  </div>
-  <div class="hot-scroll-container">
-    <div class="hot-strip" id="hotStrip"></div>
-  </div>
-</section>
-
-<!-- ── FEATURED GAMES ── -->
-<section style="background:var(--bg)">
-  <div class="section-header fade-in">
-    <div class="section-badge">🎮 Top Picks</div>
-    <h2 class="section-title">Featured Games</h2>
-    <p class="section-sub">Our handpicked selection of the best USA gambling games</p>
-  </div>
-  <div class="games-grid" id="featuredGrid"></div>
-  <div style="text-align:center;margin-top:4rem" class="fade-in">
-    <a href="games.html" class="btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem; box-shadow: 0 0 30px rgba(255,215,0,0.3);">View All 22 Games →</a>
-  </div>
-</section>
-
-<!-- ── WHY CHOOSE US ── -->
-<section style="background:var(--bg2)">
-  <div class="section-header fade-in">
-    <div class="section-badge">⭐ Why Us</div>
-    <h2 class="section-title">Why Choose Us?</h2>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;max-width:1100px;margin:0 auto">
-    <div class="stat-box fade-in">
-      <span style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">🎯</span>
-      <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Top 22 Games</h3>
-      <p style="color:var(--text-dim);font-size:.9rem">Carefully curated USA's most popular gambling games all in one hub</p>
-    </div>
-    <div class="stat-box fade-in" style="transition-delay: 0.1s;">
-      <span style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">⚡</span>
-      <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Instant Play</h3>
-      <p style="color:var(--text-dim);font-size:.9rem">Click and play instantly — no waiting, no hassle, pure gaming action</p>
-    </div>
-    <div class="stat-box fade-in" style="transition-delay: 0.2s;">
-      <span style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">📱</span>
-      <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Mobile Apps</h3>
-      <p style="color:var(--text-dim);font-size:.9rem">Download official apps for every game and play anywhere, anytime</p>
-    </div>
-    <div class="stat-box fade-in" style="transition-delay: 0.3s;">
-      <span style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">🎁</span>
-      <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Earn Rewards</h3>
-      <p style="color:var(--text-dim);font-size:.9rem">Share our games with friends and earn exclusive bonuses to play</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA BANNER ── -->
-<section style="background:linear-gradient(135deg,#1a0d00,#3d2000,#1a0d00);text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffd700\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-  <div class="fade-in" style="position:relative;z-index:2;">
-    <div class="section-badge" style="animation: pulse-glow 2s infinite;">🎰 Limited Time</div>
-    <h2 class="section-title" style="color:var(--gold);font-size:3rem;text-shadow:0 0 20px rgba(255,215,0,0.5);">Share & Get Free Play Bonus!</h2>
-    <p style="color:var(--text-dim);margin-bottom:2rem;font-size:1.1rem;">Share our website with your friends and get exclusive bonuses and free plays instantly!</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="referral.html" class="btn-primary" style="box-shadow: 0 0 20px rgba(255,215,0,0.4);">🎁 Share & Earn Now</a>
-      <a href="games.html" class="btn-outline">🎮 View Games</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="nav-logo">🎰 Games Platform</a>
-      <p>USA's #1 destination for top gambling games. Play Fish Table, Golden Dragon, Orion Stars & more — all in one place!</p>
-      <div class="footer-socials">
-        <a href="https://facebook.com/gamesplatform" class="footer-social" target="_blank">📘</a>
-        <a href="https://wa.me/1234567890" class="footer-social" target="_blank">💬</a>
-        <a href="https://instagram.com/gamesplatform" class="footer-social" target="_blank">📷</a>
-        <a href="https://twitter.com/gamesplatform" class="footer-social" target="_blank">🐦</a>
+      <div class="hero-stats reveal-up delay-3">
+        <div class="hero-stat">
+          <span class="num" data-target="22" data-suffix="">22</span>
+          <span class="lbl">Top Games</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num" data-target="50000" data-suffix="+">50,000+</span>
+          <span class="lbl">Active Players</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num" data-target="100" data-suffix="%">100%</span>
+          <span class="lbl">Safe & Secure</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num" data-target="24" data-suffix="/7">24/7</span>
+          <span class="lbl">Support</span>
+        </div>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="games.html">All Games</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Top Games</h4>
-      <ul>
-        <li><a href="games.html">Fish Table</a></li>
-        <li><a href="games.html">Golden Dragon</a></li>
-        <li><a href="games.html">Orion Stars</a></li>
-        <li><a href="games.html">Ultra Panda</a></li>
-        <li><a href="games.html">Juwa</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Community</h4>
-      <ul>
-        <li><a href="referral.html">Share & Earn</a></li>
-        <li><a href="contact.html">Support</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Games Platform. All rights reserved.</p>
-    <p class="disclaimer">⚠️ For entertainment purposes. Must be 18+ to play. Please game responsibly.</p>
-  </div>
-</footer>
+  </section>
 
-<script src="js/games.js"></script>
-<script src="js/main.js"></script>
+  <!-- ── HOT GAMES ── -->
+  <section class="hot-section">
+    <div class="section-header fade-in" style="padding:0 5% 1.5rem">
+      <div class="section-badge" style="animation: pulse-glow 2s infinite;">🔥 Trending Now</div>
+      <h2 class="section-title">Hot Games</h2>
+    </div>
+    <div class="hot-scroll-container">
+      <div class="hot-strip" id="hotStrip"></div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED GAMES ── -->
+  <section style="background:var(--bg)">
+    <div class="section-header fade-in">
+      <div class="section-badge">🎮 Top Picks</div>
+      <h2 class="section-title">Featured Games</h2>
+      <p class="section-sub">Our handpicked selection of the best USA gambling games</p>
+    </div>
+    <div class="games-grid" id="featuredGrid"></div>
+    <div style="text-align:center;margin-top:4rem" class="fade-in">
+      <a href="games.html" class="btn-primary"
+        style="padding: 1rem 3rem; font-size: 1.1rem; box-shadow: 0 0 30px rgba(255,215,0,0.3);">View All 22 Games →</a>
+    </div>
+  </section>
+
+  <!-- ── WHY CHOOSE US ── -->
+  <section style="background:var(--bg2)">
+    <div class="section-header fade-in">
+      <div class="section-badge">⭐ Why Us</div>
+      <h2 class="section-title">Why Choose Us?</h2>
+    </div>
+    <div
+      style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;max-width:1100px;margin:0 auto">
+      <div class="stat-box fade-in">
+        <span
+          style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">🎯</span>
+        <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Top 22 Games</h3>
+        <p style="color:var(--text-dim);font-size:.9rem">Carefully curated USA's most popular gambling games all in one
+          hub</p>
+      </div>
+      <div class="stat-box fade-in" style="transition-delay: 0.1s;">
+        <span
+          style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">⚡</span>
+        <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Instant Play</h3>
+        <p style="color:var(--text-dim);font-size:.9rem">Click and play instantly — no waiting, no hassle, pure gaming
+          action</p>
+      </div>
+      <div class="stat-box fade-in" style="transition-delay: 0.2s;">
+        <span
+          style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">📱</span>
+        <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Mobile Apps</h3>
+        <p style="color:var(--text-dim);font-size:.9rem">Download official apps for every game and play anywhere,
+          anytime</p>
+      </div>
+      <div class="stat-box fade-in" style="transition-delay: 0.3s;">
+        <span
+          style="font-size:3rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));">🎁</span>
+        <h3 style="font-family:Cinzel,serif;color:var(--gold);margin-bottom:.5rem">Earn Rewards</h3>
+        <p style="color:var(--text-dim);font-size:.9rem">Share our games with friends and earn exclusive bonuses to play
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ── -->
+  <section
+    style="background:linear-gradient(135deg,#1a0d00,#3d2000,#1a0d00);text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;">
+    <div
+      style="position:absolute;inset:0;background:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffd700\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+    </div>
+    <div class="fade-in" style="position:relative;z-index:2;">
+      <div class="section-badge" style="animation: pulse-glow 2s infinite;">🎰 Limited Time</div>
+      <h2 class="section-title" style="color:var(--gold);font-size:3rem;text-shadow:0 0 20px rgba(255,215,0,0.5);">Share
+        & Get Free Play Bonus!</h2>
+      <p style="color:var(--text-dim);margin-bottom:2rem;font-size:1.1rem;">Share our website with your friends and get
+        exclusive bonuses and free plays instantly!</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="referral.html" class="btn-primary" style="box-shadow: 0 0 20px rgba(255,215,0,0.4);">🎁 Share & Earn
+          Now</a>
+        <a href="games.html" class="btn-outline">🎮 View Games</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">🎰 Games Platform</a>
+        <p>USA NO 1 destination for top gambling games. Play Fish Table, Golden Dragon, Orion Stars & more — all in one
+          place!</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=100082982277084" class="footer-social" target="_blank">📘</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">All Games</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Top Games</h4>
+        <ul>
+          <li><a href="games.html">Fish Table</a></li>
+          <li><a href="games.html">Golden Dragon</a></li>
+          <li><a href="games.html">Orion Stars</a></li>
+          <li><a href="games.html">Ultra Panda</a></li>
+          <li><a href="games.html">Juwa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="referral.html">Share & Earn</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Games Platform. All rights reserved.</p>
+      <p class="disclaimer">⚠️ For entertainment purposes. Must be 18+ to play. Please game responsibly.</p>
+    </div>
+  </footer>
+
+  <script src="js/games.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // ── HOME PAGE SPIN WHEEL ──
+    (function () {
+      // Generate bulbs
+      const bulbsContainer = document.getElementById('homeBulbsContainer');
+      const totalBulbs = 24;
+      const isMobile = window.innerWidth <= 480;
+      const radius = isMobile ? 153 : 193;
+      for (let i = 0; i < totalBulbs; i++) {
+        const bulb = document.createElement('div');
+        bulb.className = 'idx-light-bulb';
+        const angle = (i * 360) / totalBulbs;
+        bulb.style.transform = `translateX(-50%) rotate(${angle}deg)`;
+        bulb.style.transformOrigin = `50% ${radius}px`;
+        bulbsContainer.appendChild(bulb);
+      }
+
+      // Spin logic — always lands on ? (Slice 6)
+      const wheel = document.getElementById('homeWheel');
+      const spinBtn = document.getElementById('homeSpinBtn');
+      const modal = document.getElementById('homeWinnerModal');
+      let currentRotation = 0;
+
+      spinBtn.addEventListener('click', () => {
+        spinBtn.disabled = true;
+        const duration = Math.random() * 3 + 5;
+        const sliceMidAngle = 334.29;
+        const pointerAngle = 270;
+        const wobble = (Math.random() - 0.5) * 16;
+        const neededRotation = ((pointerAngle - sliceMidAngle + 360) % 360) + wobble;
+        const extraSpins = Math.floor(Math.random() * 5) + 6;
+        const remainder = currentRotation % 360;
+        const offsetToZero = (360 - remainder) % 360;
+        const finalRotation = currentRotation + offsetToZero + (extraSpins * 360) + neededRotation;
+
+        wheel.style.transition = `transform ${duration}s cubic-bezier(0.05, 0.8, 0.1, 1)`;
+        wheel.style.transform = `rotate(${finalRotation}deg)`;
+        currentRotation = finalRotation;
+
+        setTimeout(() => {
+          modal.classList.add('show');
+          spinBtn.disabled = false;
+        }, duration * 1000 + 400);
+      });
+    })();
+  </script>
 </body>
+
 </html>
