@@ -17,12 +17,12 @@ const SITE_CONFIG = {
 const GAMES = [
   {
     id: 1,
-    name: "Yolo 777",
+    name: "Master Cash",
     category: "slots",
-    image: "images/Yolo 777.jfif",
+    image: "images/mastercash777.jpg",
     description: "Spin your way to massive wins with Yolo 777! One of USA's most loved slot experiences.",
-    playLink: "https://h5.yolo777.top/YOLO/",
-    downloadLink: "https://h5.yolo777.top/YOLO/",
+    playLink: "https://mastercash777.com",
+    downloadLink: "https://mastercash777.com",
     hot: true, featured: true, badge: "🔥 HOT", rating: 4.9
   },
   {
@@ -234,6 +234,16 @@ const GAMES = [
     playLink: "https://moolah.vip:8888/",
     downloadLink: "https://moolah.vip:8888/",
     hot: true, featured: false, badge: "💸 MOOLAH", rating: 4.7
+  },
+  {
+    id: 23,
+    name: "Yolo 777",
+    category: "slots",
+    image: "images/Yolo 777.jfif",
+    description: "Spin your way to massive wins with Yolo 777! One of USA's most loved slot experiences.",
+    playLink: "https://h5.yolo777.top/YOLO/",
+    downloadLink: "https://h5.yolo777.top/YOLO/",
+    hot: true, featured: true, badge: "🔥 HOT", rating: 4.9
   }
 ];
 
