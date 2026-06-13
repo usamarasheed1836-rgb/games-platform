@@ -16,7 +16,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
@@ -231,6 +231,144 @@
     .stat-box:hover {
       transform: translateY(-15px) scale(1.05);
       box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+    }
+
+    /* Hero Spin & Win Styles */
+    .hero-main-title {
+      font-family: 'Cinzel', serif;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .spin-text {
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 5px 15px rgba(255, 0, 255, 0.5), 0 0 40px rgba(138, 43, 226, 0.8);
+      letter-spacing: 2px;
+    }
+
+    .cash-text {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--gold);
+      text-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+      letter-spacing: 1px;
+    }
+
+    .min-max-box {
+      display: inline-block;
+      margin: 1rem 0 2rem;
+      padding: 0.5rem 1.5rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00ffff;
+      border: 2px solid #00ffff;
+      border-radius: 50px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.2);
+      text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+      animation: pulse-cyan 2s infinite;
+    }
+
+    @keyframes pulse-cyan {
+
+      0%,
+      100% {
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.2);
+      }
+
+      50% {
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 15px rgba(0, 255, 255, 0.4);
+      }
+    }
+
+    .how-to-play-section {
+      background: rgba(10, 10, 25, 0.6);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin: 1rem auto;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .htp-title {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg2);
+      padding: 0.2rem 1rem;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 10px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .htp-steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .htp-step {
+      text-align: center;
+      flex: 1;
+    }
+
+    .htp-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      filter: drop-shadow(0 0 5px var(--gold));
+    }
+
+    .htp-step-num {
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .htp-step-desc {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      line-height: 1.2;
+    }
+
+    .htp-arrow {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .spin-text {
+        font-size: 3rem;
+      }
+
+      .cash-text {
+        font-size: 1.8rem;
+      }
+
+      .min-max-box {
+        font-size: 1.2rem;
+      }
+
+      .htp-steps {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .htp-arrow {
+        transform: rotate(90deg);
+      }
+
+      .how-to-play-section {
+        padding-top: 2rem;
+      }
     }
   </style>
 
@@ -746,20 +884,36 @@
       <p>Congratulations! You've landed on the Mystery Bonus.<br><br>To claim your free play up to $500, please explore
         our website, leave feedback on our Facebook page, and send us a message in English.</p>
       <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:1rem; text-align:left;">
-        <a href="https://www.facebook.com/profile.php?id=61584850914753" target="_blank" style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;" onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
-          <img src="images/Shark cash vault.jpg" alt="Shark Cash Vault" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+        <a href="https://www.facebook.com/profile.php?id=61584850914753" target="_blank"
+          style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;"
+          onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';"
+          onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
+          <img src="images/Shark cash vault.jpg" alt="Shark Cash Vault"
+            style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
           <strong style="font-size:0.9rem;">Shark Cash Vault</strong>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61578648013585" target="_blank" style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;" onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
-          <img src="images/ZyphoraPlay.jpg" alt="Zyphora Play" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+        <a href="https://www.facebook.com/profile.php?id=61578648013585" target="_blank"
+          style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;"
+          onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';"
+          onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
+          <img src="images/ZyphoraPlay.jpg" alt="Zyphora Play"
+            style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
           <strong style="font-size:0.9rem;">Zyphora Play</strong>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61577637233099" target="_blank" style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;" onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
-          <img src="images/Triple 7’77 slots.jpg" alt="Triple 7’77 slots" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+        <a href="https://www.facebook.com/profile.php?id=61577637233099" target="_blank"
+          style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;"
+          onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';"
+          onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
+          <img src="images/Triple 7’77 slots.jpg" alt="Triple 7’77 slots"
+            style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
           <strong style="font-size:0.9rem;">Triple 7’77 slots</strong>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=100082982277084" target="_blank" style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;" onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
-          <img src="images/Dragon Fish & Slots.jpg" alt="Dragon Fish & Slots" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+        <a href="https://www.facebook.com/profile.php?id=100082982277084" target="_blank"
+          style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;"
+          onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';"
+          onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
+          <img src="images/Dragon Fish & Slots.jpg" alt="Dragon Fish & Slots"
+            style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
           <strong style="font-size:0.9rem;">Dragon Fish & Slots</strong>
         </a>
       </div>
@@ -796,18 +950,48 @@
     </div>
 
     <div class="hero-content">
-      <div class="hero-badge hero-badge-animated reveal-up">✨ USA'S PREMIER GAMING HUB</div>
-      <h1 class="reveal-up delay-1">Play. Win.<br /><span style="color:var(--gold);">Spin to Glory.</span></h1>
-      <p class="reveal-up delay-2">The ultimate destination for top USA gambling games. Fish Tables, Dragon Slots,
-        Sweepstakes & more — all in one place!</p>
-      <div class="hero-btns reveal-up delay-3">
-        <a href="games.html" class="btn-primary">🎮 Explore All Games</a>
-        <a href="referral.html" class="btn-outline">🎁 Share & Earn Bonus</a>
+      <div class="hero-badge hero-badge-animated reveal-up">✨ GAMESPLAT.COM</div>
+
+      <h1 class="hero-main-title">
+        <span class="spin-text">SPIN & WIN</span><br />
+        <span class="cash-text">REAL CASH PRIZES!</span>
+      </h1>
+
+      <div class="min-max-box">
+        MIN $5 &ndash; MAX $500
       </div>
 
-      <div class="hero-stats reveal-up delay-3">
+      <div class="how-to-play-section reveal-up delay-2">
+        <div class="htp-title">HOW TO PLAY</div>
+        <div class="htp-steps">
+          <div class="htp-step">
+            <div class="htp-icon">👤</div>
+            <div class="htp-step-num">1 SIGN UP</div>
+            <div class="htp-step-desc">Create your<br />free account</div>
+          </div>
+          <div class="htp-arrow">➡</div>
+          <div class="htp-step">
+            <div class="htp-icon">🎡</div>
+            <div class="htp-step-num">2 SPIN WHEEL</div>
+            <div class="htp-step-desc">Spin and try<br />your luck</div>
+          </div>
+          <div class="htp-arrow">➡</div>
+          <div class="htp-step">
+            <div class="htp-icon">💵</div>
+            <div class="htp-step-num">3 WIN CASH</div>
+            <div class="htp-step-desc">Win real cash<br />instantly</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-btns reveal-up delay-3" style="margin-top: 2rem;">
+        <a href="games.html" class="btn-primary">🎮 Explore All Games</a>
+        <a href="freeplay.html" class="btn-outline">🎡 Spin Now</a>
+      </div>
+
+      <div class="hero-stats reveal-up delay-3" style="margin-top: 3rem;">
         <div class="hero-stat">
-          <span class="num" data-target="22" data-suffix="">22</span>
+          <span class="num" data-target="22" data-suffix="">23</span>
           <span class="lbl">Top Games</span>
         </div>
         <div class="hero-stat">
@@ -913,9 +1097,15 @@
   <!-- ── SEO CONTENT ── -->
   <section style="background:var(--bg); padding: 4rem 5%; border-top: 1px solid var(--border);">
     <div style="max-width: 1100px; margin: 0 auto; color: var(--text-dim); line-height: 1.8;">
-      <h2 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem; font-size: 2rem;">Play Top USA Gambling Casino Games Online Now</h2>
-      <p style="margin-bottom: 1rem;">Welcome to the ultimate Games Platform, your number one destination to play hot USA gambling games and sweepstakes online. Whether you're looking to enjoy the thrill of a classic Fish Table, spin the reels on Golden Dragon, or win big on Orion Stars and Juwa, we have it all right here. You can download our secure apps now and start playing instantly from anywhere.</p>
-      <p style="margin-bottom: 1rem;">We pride ourselves on offering a top-tier gaming experience with exclusive referral bonuses. Share and earn today! When you share our platform with friends, you can both earn free play bonuses. Don't wait—dive into the action, discover your favorite casino games, and start winning today.</p>
+      <h2 style="font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 1rem; font-size: 2rem;">Play Top USA
+        Gambling Casino Games Online Now</h2>
+      <p style="margin-bottom: 1rem;">Welcome to the ultimate Games Platform, your number one destination to play hot
+        USA gambling games and sweepstakes online. Whether you're looking to enjoy the thrill of a classic Fish Table,
+        spin the reels on Golden Dragon, or win big on Orion Stars and Juwa, we have it all right here. You can download
+        our secure apps now and start playing instantly from anywhere.</p>
+      <p style="margin-bottom: 1rem;">We pride ourselves on offering a top-tier gaming experience with exclusive
+        referral bonuses. Share and earn today! When you share our platform with friends, you can both earn free play
+        bonuses. Don't wait—dive into the action, discover your favorite casino games, and start winning today.</p>
     </div>
   </section>
 
@@ -992,7 +1182,7 @@
       const lastSpin = localStorage.getItem('lastSpinTime');
       if (lastSpin && (Date.now() - parseInt(lastSpin, 10) < 24 * 60 * 60 * 1000)) {
         const wheelSection = document.getElementById('homeWheelSection');
-        if(wheelSection) wheelSection.style.display = 'none';
+        if (wheelSection) wheelSection.style.display = 'none';
       }
 
       spinBtn.addEventListener('click', () => {
@@ -1000,7 +1190,7 @@
         localStorage.setItem('lastSpinTime', Date.now()); // Save current time
 
         const duration = Math.random() * 3 + 5;
-        
+
         // 3 Possible outcomes: $2 (25.71), $5 (77.14), ? (334.29)
         const possibleAngles = [25.71, 77.14, 334.29];
         const sliceMidAngle = possibleAngles[Math.floor(Math.random() * possibleAngles.length)];
@@ -1022,11 +1212,11 @@
           let amountText = "up to $500";
           if (sliceMidAngle === 25.71) { prizeText = "$2 Free Play"; amountText = "$2"; }
           else if (sliceMidAngle === 77.14) { prizeText = "$5 Free Play"; amountText = "$5"; }
-          
+
           const h3 = modal.querySelector('h3');
           const p = modal.querySelector('p');
-          if(h3) h3.innerText = `${prizeText} Won!`;
-          if(p) p.innerHTML = `Congratulations! You've landed on the ${prizeText}.<br><br>To claim your free play ${amountText}, please explore our website, leave feedback on our Facebook page, and send us a message in English.`;
+          if (h3) h3.innerText = `${prizeText} Won!`;
+          if (p) p.innerHTML = `Congratulations! You've landed on the ${prizeText}.<br><br>To claim your free play ${amountText}, please explore our website, leave feedback on our Facebook page, and send us a message in English.`;
 
           modal.classList.add('show');
           spinBtn.disabled = false;
