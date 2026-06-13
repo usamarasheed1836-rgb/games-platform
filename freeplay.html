@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Free Play – Games Platform</title>
   <meta name="description"
@@ -252,9 +251,11 @@
       background: linear-gradient(135deg, var(--bg2) 0%, #151528 100%);
       border: 2px solid var(--gold);
       border-radius: var(--radius);
-      padding: 3.5rem 2rem;
-      max-width: 500px;
-      width: 90%;
+      padding: 1.5rem;
+      max-width: 400px;
+      width: 95%;
+      max-height: 90vh;
+      overflow-y: auto;
       text-align: center;
       box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.8),
@@ -270,16 +271,16 @@
     .modal-content h3 {
       font-family: 'Cinzel', serif;
       color: var(--gold);
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
       text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
     }
 
     .modal-content p {
       color: var(--text-dim);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 2.2rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
     }
 
     .modal-close {
@@ -466,7 +467,7 @@
         -->
           <g fill="#ffffff" font-family="'Cinzel', serif" font-weight="900" text-anchor="middle">
             <text x="230" y="155" font-size="15" transform="rotate(25.71, 150, 150)">$2</text>
-            <text x="230" y="155" font-size="13" transform="rotate(77.14, 150, 150)">$50</text>
+            <text x="230" y="155" font-size="13" transform="rotate(77.14, 150, 150)">$5</text>
             <text x="230" y="155" font-size="12" transform="rotate(128.57, 150, 150)">$150</text>
             <text x="230" y="155" font-size="12" transform="rotate(180, 150, 150)">$250</text>
             <text x="230" y="155" font-size="12" transform="rotate(231.43, 150, 150)">$350</text>
@@ -484,13 +485,28 @@
   <!-- WINNER MODAL -->
   <div class="modal-overlay" id="winnerModal">
     <div class="modal-content">
-      <div style="font-size: 4.5rem; margin-bottom: 1rem; filter: drop-shadow(0 0 10px var(--gold));">🎁</div>
+      <div style="font-size: 3rem; margin-bottom: 0.5rem; filter: drop-shadow(0 0 10px var(--gold));">🎁</div>
       <h3>Mystery Bonus Won!</h3>
       <p>Congratulations! You've landed on the Mystery Bonus.<br><br>To claim your free play up to $7, please explore
         our website, leave feedback on our Facebook page, and send us a message in English.</p>
-      <a href="https://www.facebook.com/profile.php?id=61577637233099" target="_blank" class="btn-primary"
-        style="display:inline-flex; margin-bottom:1rem; box-shadow:0 0 15px rgba(255,215,0,0.3)">📘 Message on
-        Facebook</a><br>
+      <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:1rem; text-align:left;">
+        <a href="https://www.facebook.com/profile.php?id=61584850914753" target="_blank" style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;" onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
+          <img src="images/Shark cash vault.jpg" alt="Shark Cash Vault" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+          <strong style="font-size:0.9rem;">Shark Cash Vault</strong>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61578648013585" target="_blank" style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;" onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
+          <img src="images/ZyphoraPlay.jpg" alt="Zyphora Play" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+          <strong style="font-size:0.9rem;">Zyphora Play</strong>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577637233099" target="_blank" style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;" onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
+          <img src="images/Triple 7’77 slots.jpg" alt="Triple 7’77 slots" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+          <strong style="font-size:0.9rem;">Triple 7’77 slots</strong>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100082982277084" target="_blank" style="display:flex; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:10px; text-decoration:none; color:var(--text-dim); border:1px solid rgba(255,215,0,0.2); transition:0.3s;" onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(255,215,0,0.2)'; this.style.color='var(--text-dim)';">
+          <img src="images/Dragon Fish & Slots.jpg" alt="Dragon Fish & Slots" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+          <strong style="font-size:0.9rem;">Dragon Fish & Slots</strong>
+        </a>
+      </div>
       <button class="modal-close"
         onclick="document.getElementById('winnerModal').classList.remove('show')">Close</button>
     </div>
@@ -556,28 +572,31 @@
       bulbsContainer.appendChild(bulb);
     }
 
-    // WHEEL SPINNING LOGIC — Always lands on '?' (Slice 6)
+    // WHEEL SPINNING LOGIC
     const wheel = document.getElementById('wheel');
     const spinBtn = document.getElementById('spinBtn');
     const modal = document.getElementById('winnerModal');
 
     let currentRotation = 0;
 
+    // Check if user has spun in the last 24 hours
+    const lastSpin = localStorage.getItem('lastSpinTime');
+    if (lastSpin && (Date.now() - parseInt(lastSpin, 10) < 24 * 60 * 60 * 1000)) {
+      const wheelSection = document.querySelector('.wheel-section');
+      if (wheelSection) wheelSection.style.display = 'none';
+    }
+
     spinBtn.addEventListener('click', () => {
       spinBtn.disabled = true;
+      localStorage.setItem('lastSpinTime', Date.now()); // Save current time
 
       // Random spin duration: 5–8 seconds
       const duration = Math.random() * 3 + 5;
 
-      // 7 slices, each = 360/7 ≈ 51.4286°
-      // Slice 6 (?) starts at 6 * 51.4286° = 308.57° and ends at 360° (= 0°)
-      // Midpoint of Slice 6 = 308.57 + 25.71 = 334.29° (SVG angle, measured clockwise from right/east)
-      //
-      // The pointer is at the TOP of the wheel (SVG 270° = 12 o'clock).
-      // To bring slice midpoint to the top we need:
-      //   needed = (270 - 334.29 + 360) % 360 = 295.71°
-      // Then add a small random wobble (±8°) within the slice to look natural:
-      const sliceMidAngle = 334.29;
+      // 3 Possible outcomes: $2 (25.71), $5 (77.14), ? (334.29)
+      const possibleAngles = [25.71, 77.14, 334.29];
+      const sliceMidAngle = possibleAngles[Math.floor(Math.random() * possibleAngles.length)];
+
       const pointerAngle = 270;
       const wobble = (Math.random() - 0.5) * 16; // ±8°
       const neededRotation = ((pointerAngle - sliceMidAngle + 360) % 360) + wobble;
@@ -594,6 +613,16 @@
 
       // Show modal after spin finishes
       setTimeout(() => {
+        let prizeText = "Mystery Bonus";
+        let amountText = "up to $7";
+        if (sliceMidAngle === 25.71) { prizeText = "$2 Free Play"; amountText = "$2"; }
+        else if (sliceMidAngle === 77.14) { prizeText = "$5 Free Play"; amountText = "$5"; }
+        
+        const h3 = modal.querySelector('h3');
+        const p = modal.querySelector('p');
+        if (h3) h3.innerText = `${prizeText} Won!`;
+        if (p) p.innerHTML = `Congratulations! You've landed on the ${prizeText}.<br><br>To claim your free play ${amountText}, please explore our website, leave feedback on our Facebook page, and send us a message in English.`;
+
         modal.classList.add('show');
         spinBtn.disabled = false;
       }, duration * 1000 + 400);
