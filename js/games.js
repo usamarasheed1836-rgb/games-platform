@@ -17,7 +17,7 @@ const SITE_CONFIG = {
 const GAMES = [
   {
     id: 1,
-    name: "Master Cash",
+    name: "Cash Master",
     category: "slots",
     image: "images/mastercash777.jpg",
     description: "Spin your way to massive wins with Yolo 777! One of USA's most loved slot experiences.",
